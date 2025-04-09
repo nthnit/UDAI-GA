@@ -116,14 +116,3 @@ Additionally, you can select the language (English / Tiếng Việt) in the side
 
 - **prediction.py:**  
   Offers an interactive interface for users to input wine features and predict wine quality with the trained model.
-
-## License
-
-This project is for educational purposes and is licensed under the [MIT License](LICENSE).
-
----
-
-Feel free to contribute by opening issues or submitting pull requests. Enjoy exploring the Wine Quality Prediction application!
-```
-
-Copy toàn bộ nội dung trên vào file README.md trong repository của bạn. Chúc bạn thành công với dự án!
