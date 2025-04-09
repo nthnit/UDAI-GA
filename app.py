@@ -4,9 +4,23 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Cấu hình trang toàn màn hình
-st.set_page_config(page_title="Wine Quality Prediction", layout="wide")
+st.set_page_config(page_title="Wine Quality Prediction", page_icon="assets/logoFIT.svg", layout="wide")
+st.markdown("""
+<style>
+	[data-testid="stDecoration"] {
+		background-image: linear-gradient(90deg, rgb(0, 102, 204), rgb(102, 255, 255));
+	}
+    .st-d3 {
+    background-color: rgb(34, 83, 192);
+    }
+}
 
+
+ 
+</style>""",
+unsafe_allow_html=True)
+
+st.sidebar.image("assets/logoFIT.svg", width=150)
 # ----------------- ĐỌC FILE TRANSLATIONS -----------------
 @st.cache_data
 def load_translations():
@@ -16,6 +30,7 @@ def load_translations():
 translations = load_translations()
 
 # ----------------- CHỌN NGÔN NGỮ -----------------
+
 selected_lang_display = st.sidebar.selectbox("Select Language / Chọn Ngôn ngữ", ["English", "Tiếng Việt"])
 language_mapping = {"English": "en", "Tiếng Việt": "vi"}
 selected_language = language_mapping[selected_lang_display]
@@ -35,6 +50,7 @@ data = load_data()
 from modules import introduction, eda, training, prediction
 
 # ----------------- NAVIGATION -----------------
+
 nav = st.sidebar.radio("Navigation", [tr("nav1"), tr("nav2"), tr("nav3"), tr("nav4")])
 
 if nav == tr("nav1"):
