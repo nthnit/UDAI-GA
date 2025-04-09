@@ -10,7 +10,6 @@ This repository is part of a group project for the course **Ứng dụng AI tron
 - [Installation](#installation)
 - [Usage](#usage)
 - [Modules Description](#modules-description)
-- [License](#license)
 
 ## Overview
 
