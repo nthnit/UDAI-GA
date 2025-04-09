@@ -32,7 +32,7 @@ def show(data, tr):
     st.write("Confusion Matrix:")
     st.write(confusion_matrix(y_test, y_pred))
     st.write("Classification Report:")
-    st.text(classification_report(y_test, y_pred))
+    st.text(classification_report(y_test, y_pred, zero_division=0))
     
     # Lưu đối tượng vào session_state để sử dụng sau này
     st.session_state.scaler = scaler
