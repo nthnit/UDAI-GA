@@ -5,22 +5,23 @@ import matplotlib.pyplot as plt
 
 def show(data, tr):
     st.markdown(
-        """
-        <style>
-        div.stButton > button {
-            background-color: rgb(0, 102, 204) !important;
-            color: white !important;
-            border: none !important;
-        }
-        div.stButton > button:hover {
-            background-color: rgb(0, 82, 184) !important;
-        }
-        .focused {
-            border-color: rgb(0, 102, 204) !important;
-        }
-        </style>
-        """, unsafe_allow_html=True
-    )
+    """
+    <style>
+    /* Chỉ ảnh hưởng đến NỘI DUNG chính, không đụng Sidebar */
+    section.main div.stButton > button {
+        background-color: rgb(0, 102, 204) !important;
+        color: white !important;
+        border: none !important;
+    }
+    section.main div.stButton > button:hover {
+        background-color: rgb(0, 82, 184) !important;
+    }
+    section.main .focused {
+        border-color: rgb(0, 102, 204) !important;
+    }
+    </style>
+    """, unsafe_allow_html=True
+)
     
     st.header(tr("section4_header"))
     if "knn" not in st.session_state or "scaler" not in st.session_state:
